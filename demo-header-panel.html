@@ -27,9 +27,9 @@
                 }
             }
         </style>
-        <div class="parent">
+        <div class="parent" is-content="attr" content-id="selected-link" content-attr="selected">
             <paper-dropdown-menu class="documentation-links" label="Documentation">
-                <paper-listbox class="dropdown-content" on-iron-select="_handleChange" attrForSelected="value" selected$="{{selected}}">
+                <paper-listbox class="dropdown-content" on-iron-select="_handleChange" attrForSelected="value" selected$="{{selected}}" is-content="attr" content-id="selected-link" content-attr="selected">
                     <paper-item value="">Main</paper-item>
                     <paper-item value="/pages/en-US/pancake-components">Pancake Components</paper-item>
                     <paper-item value="/pages/en-US/pancake-player">Pancake Player</paper-item>
@@ -44,7 +44,7 @@
             is: 'demo-header-panel',
             properties: {
                 selected: {
-                    type: String,
+                    type: Number,
                     value: '',
                     notify: true
                 },
